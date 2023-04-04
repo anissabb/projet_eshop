@@ -75,8 +75,56 @@
   width:100px;
   height:100px;
  }
+ .images{
+float:left
+  width:100%;
  
+ }
+ .images>img{
+  float:left;
+  margin-top:15%;
+  width:30%;
+  height:30%;
 
+ }
+ .images >img:hover{
+  opacity:0.7
+ }
+ .text{
+  float:left;
+  margin-left:10%;
+
+  margin-top:20%;
+ }
+.text h1{
+  float:left;
+  font-size:25px;
+}
+.text h3{
+  font-size:20px;
+}
+.footer{
+background-color:beige;
+height:300px;
+margin-top:70%;
+}
+.footer>img{
+  width:100px;
+  height:100px;
+
+}
+.infos{
+ float:left;
+ margin-left:10%;
+}
+.infos2{
+  float:left;
+  margin-left:10%;
+}
+.infos3{
+  float:left;
+  margin-left:10%;
+}
   </style>
 
 {% endblock %}
@@ -116,6 +164,39 @@
             {% endfor %}
   
     </div>
+    <div class="images">
+
+        <img src={{asset("./images/skincare.jpg")}}>
+          <div class="text">
+            <h1>Notre nettoyant visage est enfin disponible</h1>
+            <a href=""><h3>Découvrez maintenant </h3></a>
+    </div>
+        
+    </div>
+      <div class="footer">
+
+       
+          <div class="infos">
+            <h2>Liens rapides</h2>
+            <a href="">A propos</a>
+            <a href="">Contact</a>
+          </div>
+          <div class="infos2">
+            <h2>Notre adresse</h2>
+            <p>Rue blabla 20,1030 Bruxelles </p>
+          </div>
+          <div class="infos3">
+            <h2>Nos réseaux sociaux</h2>
+          </div>
+    
+        
+    </div>
+{# {% block footer %}
+
+    {% include "./header/footer.html.twig" %}
+
+{% endblock %} #}
+    
 
 {% endblock %}
 

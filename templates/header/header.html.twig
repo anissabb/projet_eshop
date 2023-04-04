@@ -39,7 +39,7 @@
                  
                         {% if is_granted('IS_AUTHENTICATED_FULLY')  %}
                 
-                      <li class="nav-item"><a class="nav-link" href="{{path('app_compte')}}" style="color:black">Mon compte</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{{path('app_compte',{'id':app.User.id})}}" style="color:black">Mon compte</a></li>
                       
                       
                           <li><a class="nav-link" href="{{ path('app_logout') }}" style="color:black">Déconnexion</a></li>
@@ -56,45 +56,6 @@
     </div>
   </div>
 </nav>
-
-
-
-{#  
-<div class="header">
- <img src={{asset('images/logo.png')}}>
-
-    <nav class="nav">
-   
-        <ul>
-             
-              <li> <a href="{{path('app_accueil')}}">Accueil</a></li>
-             
-           
-
-            
-            <li><a href="{{path('app_cart')}}">Mon panier</i></a></li>
-            {% if is_granted('IS_AUTHENTICATED_FULLY')  %}
-                
-                      <li><a href="{{path('app_compte')}}">Mon compte</a>
-                       <ul class="sub-menu">
-                          <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
-            {% else %}
-                          <li><a href="{{ path('app_login') }}">Se connecter</a></li>
-                          <li><a href="{{ path('app_register') }}">S'inscrire</a></li>
-            
-                        </ul>
-                      
-            {% endif %}
-                      </li>
-
-          
-        </ul>
-    </nav>
-
-
-
-
-</div>  #}
 
 
 

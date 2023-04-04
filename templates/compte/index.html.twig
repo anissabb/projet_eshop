@@ -1,8 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CompteController!{% endblock %}
+
+{% block stylesheets %}
+
+<style>
+    .infosperso{
+        margin-top:10%;
+    }
+</style>
+
+
+{% endblock %}
+
 
 {% block body %}
 
 <h1>Mes informations personnelles</h1>
+<div class="infosperso">
+
+{# Fonctionne en mettant l'id dans la route #}
+
+
+
+
+{{app.User.nomClient}}
+</br>
+{{app.User.prenomClient}}
+</br>
+{{app.User.email}}
+</br>
+{{app.User.adresseClient}}
+</br>
+<a href=''>Modifier mes informations</a>
+</div>
 {% endblock %}
