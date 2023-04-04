@@ -1,0 +1,121 @@
+{% extends 'base.html.twig' %}
+
+
+
+
+
+{% block stylesheets %}
+     
+  <style>
+    .catalogue{
+      margin-top:8%;
+      margin-left:10%;
+      width:100px;
+      height:100px;
+      font-family:"Didot"
+      }
+    .produit img{
+      width:100px;
+      height:100px;
+      }
+      .card-body>img{
+        width:80%
+      }
+      .card{
+        float:left;
+        width:20%;
+        margin-left:9%;
+        border-color:white;
+        
+      }
+      .card-title{
+        margin-top:10%;
+        text-decoration:none;
+        color:black;
+        font-size:20px;
+        
+        
+      }
+
+      #cardbody{
+        width:100%
+      }
+      #cardbodyimg{
+        width:100%
+      }
+      .button{
+        border: none;
+        width: 42%;
+        height: 40px;
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        border-radius: 10px;
+        background-color:#C19770;
+       
+      }
+      .ajouter{
+        color:black;
+        text-decoration: none;
+        margin-left:25%;
+        padding-top:20px;
+        font-size:20px;
+        font-family:"Didot";
+       
+
+      }
+      .ajouter:hover{
+        color:black;
+      }
+
+    .link-dark{
+      text-decoration:none;
+    }
+ .logo{
+  width:100px;
+  height:100px;
+ }
+ 
+
+  </style>
+
+{% endblock %}
+
+{% block body %}
+
+
+{% block header %}
+
+  {% include "header/header.html.twig" %}
+
+{% endblock %}
+            
+    <div class="catalogue">
+      <h1>Catalogue </h1>
+    </div>
+    <div class="card-deck">
+   
+      {%  for arrayProduits in arrayProduits %}
+       <div class="card" style="border:none">
+          <div id="cardbody" class="card-body"style="font-family:Didot">
+            <img id="cardbodyimg" class="card-img-top" src={{asset(arrayProduits.images)}} alt="Card image cap"></a>
+            
+
+          <a class="link-dark" href="{{ path('app_produit_id',{'id':arrayProduits.id})}}"><h5 class="card-title" >{{arrayProduits.nomProduit}}</h5></a>
+
+      
+
+      
+            <p class="card-text" style="font-size:20px">{{arrayProduits.prixProduit}}€</p>
+          </div>
+              <div class="button">
+                  <a class="ajouter" href="{{path('cart_add',{'id':arrayProduits.id}) }}">Ajouter</a>
+                  </div>
+            
+        </div>
+            {% endfor %}
+  
+    </div>
+
+{% endblock %}
+
