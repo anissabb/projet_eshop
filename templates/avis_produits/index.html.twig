@@ -1,12 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-<style></style>
+ <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+ <style>
+ .con{
+    margin-top:100px;
+ }
+ </style>
+{% endblock %}
+{% block javascripts %}
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 {% endblock %}
 
-{% block body %}
 
-    <div class="form">
+
+{% block body %}
+<div class="con">
+<i class="fa fa-star" aria-hidden="true" id="s1"></i>
+
+</div>
+    {# <div class="form">
     {{form_start (AvisForm)}}
     {{form_row (AvisForm.commentaire)}}
     {{form_end (AvisForm,{render_rest:false})}}
@@ -14,5 +30,5 @@
      <div class="button">
             <button type="submit" class="btn">Envoyer</button>
         </div>
-    </div>
+    </div> #}
 {% endblock %}

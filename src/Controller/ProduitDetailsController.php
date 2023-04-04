@@ -25,13 +25,12 @@ class ProduitDetailsController extends AbstractController
 
     #[Route('/produit/details/{id}',name:'app_produit_id')]
 
-    public function ProduitDetailsId(Produit $id,Request $request):Response{
+    public function ProduitDetailsId(Produit $id):Response{
         
         return $this->render('produit_details/index.html.twig',[
                 'produit'=>$id,
         ]);
     }
-
 
 
 
