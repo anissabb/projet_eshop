@@ -1,25 +1,13 @@
 {% extends 'base.html.twig' %}
 
 
-
+{% block stylesheets %}
+  {{ encore_entry_link_tags ('commandepaiement') }}
+{% endblock %}
 
 
 {% block body %}
-<style>
-h1{
-    margin-left:10%;
-    margin-top:5%
-}
-.commande{
-    margin-left:35%;
-    margin-top:5%;
-    font-size:20px
-}
-#paypal-button-container{
-    width:386px;
-    margin-left:1%
-}
-</style>
+
 
 
 <h1>Paiement</h1>

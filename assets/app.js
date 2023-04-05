@@ -3,3 +3,4 @@ import './styles/app.css';
 import $ from'jquery';
 // start the Stimulus application
 import './bootstrap';
+import './avis.js';
