@@ -25,6 +25,6 @@ class CommandePaiementController extends AbstractController
         
 
 
-        return $this->render('commande_Paiement/index.html.twig',$vars);
+        return $this->render('commande_paiement/index.html.twig',$vars);
     }
 }
