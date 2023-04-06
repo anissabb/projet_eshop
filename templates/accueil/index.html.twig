@@ -18,7 +18,9 @@
   {% include "header/header.html.twig" %}
 
 {% endblock %}
-            
+    <div class="skincare">
+      <img src="{{asset('images/skincareprod.jpg')}}">
+    </div>
     <div class="catalogue">
       <h1>Catalogue </h1>
     </div>
@@ -50,10 +52,15 @@
         <img src={{asset("./images/skincare.jpg")}}>
           <div class="text">
             <h1>Notre nettoyant visage est enfin disponible</h1>
-            <a href=""><h3>Découvrez maintenant </h3></a>
-    </div>
+            <a href=""><h3>Découvrez maintenant</h3></a> </div>
+  
+          <div class="logos">
+            {# <img src={{asset('./images/paypal5.png')}}> #}
+          </div>
+
+
         
-    </div>
+   
       <div class="footer">
 
        
@@ -74,6 +81,10 @@
     </div>
 
     
+{% block javascripts %}
+
+{{encore_entry_script_tags('accueilapp')}}
+{% endblock %}
 
 {% endblock %}
 

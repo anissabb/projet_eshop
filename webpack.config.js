@@ -29,7 +29,8 @@ Encore
     .addEntry('compte','./assets/styles/compte.css')
     .addEntry('produitdetails','./assets/styles/produitdetails.css')
     .addEntry('infosUserCommande','./assets/styles/infosUserCommande.css')
-    .addEntry('register','./assets/styles/register.css')
+    .addEntry('accueilapp','./assets/accueilapp.js')
+    
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
 

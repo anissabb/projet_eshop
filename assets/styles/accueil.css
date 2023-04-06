@@ -1,3 +1,9 @@
+
+
+.skincare img{
+min-width:100%;
+max-height:50%;
+}
 .catalogue{
     margin-top:8%;
     margin-left:10%;
@@ -93,6 +99,7 @@ margin-left:10%;
 
 margin-top:20%;
 }
+
 .text h1{
 float:left;
 font-size:25px;
@@ -106,6 +113,11 @@ color:black;
 }
 .text>a:hover{
 color:#C19770;
+}
+
+.number-box{
+  padding-top:800px;
+  padding-left:10%;
 }
 .footer{
 background-color:#e4dcd1;
@@ -129,3 +141,4 @@ margin-left:10%;
 float:left;
 margin-left:10%;
 }
+
